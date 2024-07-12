@@ -1,6 +1,6 @@
 import { cookies } from "../store"
 
-const baseUrl = 'https://lemonlive-70.deno.dev/api/' 
+const baseUrl = 'https://lemonlive-70.deno.dev/api/'
 const baseUrlSync = 'https://lemonlive.deno.dev/api/'
 // const baseUrl = 'http://localhost:8000/api/'
 
@@ -57,7 +57,7 @@ export const useFetch = (url: string, init?: RequestInit) => fetch(url, init).th
     return Promise.reject(data.msg)
   }
   return data.data
-}， e => {
+}, e => {
   console.log(e.message);
   Promise.reject('网络异常！')
 })
